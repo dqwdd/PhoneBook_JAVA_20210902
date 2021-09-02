@@ -57,72 +57,67 @@ public class MainDrive {
 		System.out.println("프로그램을 종료합니다.");
 	}
 
-	
 //	폰번 추가하는 관련 코드 함수
 	static void addPhoneNum() {
 //		이름, 폰번, 출생연도를 순서대로 입력 받자
 		Scanner myScanner = new Scanner(System.in);
-		
+
 		System.out.println("이름 입력 : ");
 		String name = myScanner.next();
-		
+
 		System.out.println("폰번 입력 : ");
 		String phoneNum = myScanner.next();
-		
+
 		System.out.println("출생연도 입력 : ");
 		int birthYear = myScanner.nextInt();
-		
+
 //		정보들을 한 줄로 모아주자(가공해주자) -> "이름,폰번,연도" 형태로
 		String content = String.format("%s, %s, %d", name, phoneNum, birthYear);
-		
+
 //		System.out.println(content);
-		
-		
-				savePhoneNumToFile(content);
-				
-				
+
+		savePhoneNumToFile(content);
+
 	}
 
-	//가공된 한 줄을 파일에 추가해주는 함수
-	static void savePhoneNumToFile( String content ) {
-		//완성된 한 줄을 myPhoneBook.csv 파일에 저장하자
-		
+	// 가공된 한 줄을 파일에 추가해주는 함수
+	static void savePhoneNumToFile(String content) {
+		// 완성된 한 줄을 myPhoneBook.csv 파일에 저장하자
+
 		File myFile = new File("myPhoneBook.csv");
-		
-		
+
 //		저장된 파일에 데이터 작성을 해주는 클래스
 		try {
 //			생성자의 두번째 파라미터 : 이어붙이기가 맞다(true넣자)(기존 내용 보존O)
 			FileWriter fw = new FileWriter(myFile, true);
-			
+
 //			FileWriter는 2byte씩 데이터 처리 -> 한 글자씩 적는다
 //			한 문장씩 적게 하는게 편하다. 보조 도구 활용
 			BufferedWriter bw = new BufferedWriter(fw);
-			
+
 //			보조도구로, 저장할 내용을 한 번에 한 줄 저장
 			bw.append(content);
 			bw.newLine();
-			
+
 //			다른 경우에도 파일에 접근할 수 있게 사용이 끝나면 닫아주자
 			bw.close();
 			fw.close();
-			
-			
+
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
+
 	}
-	
-	
-	
-	
+
 	
 //모든 목록 조회하는 함수
 	static void showAllPhoneNum() {
 
+//		ArrayList로 사용자 데이터 UserData 목록을 담아두자
+//		UserData클래스를 추가해주자
+		
+		
 	}
 
 }
