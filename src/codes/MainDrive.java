@@ -2,6 +2,8 @@ package codes;
 
 import java.util.Scanner;
 
+import com.sun.tools.jdeprscan.scan.Scan;
+
 public class MainDrive {
 	public static void main(String[] args) {
 
@@ -51,9 +53,23 @@ public class MainDrive {
 		System.out.println("프로그램을 종료합니다.");
 	}
 
-//폰번 추가하는 관련 코드 함수
+	
+//	폰번 추가하는 관련 코드 함수
 	static void addPhoneNum() {
-
+//		이름, 폰번, 출생연도를 순서대로 입력 받자
+		Scanner myScanner = new Scanner(System.in);
+		
+		System.out.println("이름 입력 : ");
+		String name = myScanner.next();
+		
+		System.out.println("폰번 입력 : ");
+		String phoneNum = myScanner.next();
+		
+		System.out.println("출생연도 입력 : ");
+		int birthYear = myScanner.nextInt();
+		
+		
+		
 	}
 
 //모든 목록 조회하는 함수
