@@ -68,8 +68,26 @@ public class MainDrive {
 		System.out.println("출생연도 입력 : ");
 		int birthYear = myScanner.nextInt();
 		
+//		정보들을 한 줄로 모아주자(가공해주자) -> "이름,폰번,연도" 형태로
+		String content = String.format("%s, %s, %d", name, phoneNum, birthYear)
+		
+//		System.out.println(content);
+//		완성된 한 줄을 myPhoneBook.csv 파일에 저장하자
+		
+				savePhoneNumToFile(content);
+				
+				
 	}
 
+	//가공된 한 줄을 파일에 추가해주는 함수
+	static void savePhoneNumToFile( String content ) {
+		//
+	}
+	
+	
+	
+	
+	
 //모든 목록 조회하는 함수
 	static void showAllPhoneNum() {
 
