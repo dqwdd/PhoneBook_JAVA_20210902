@@ -68,8 +68,6 @@ public class MainDrive {
 		System.out.println("출생연도 입력 : ");
 		int birthYear = myScanner.nextInt();
 		
-		
-		
 	}
 
 //모든 목록 조회하는 함수
